@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute & Relative</title>
+    <style>
+        body {
+            position: relative;
+            height: 3000px;
+        }
+
+        .a15 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 10000em;
+            background-color: black;
+        }
+
+        .a15-btn {
+            color: white;
+            background-color: transparent;
+            border: none;
+            width: 37px;
+            height: 37px;
+            font-size: large;
+            font-weight: 400;
+            font-family: Arial;
+        }
+
+        .b15 {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 320px;
+            height: 180px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .c15 {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 320px;
+            height: 180px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a15">
+        <button class="a15-btn">X</button>
+    </div>
+
+    <div class="b15"></div>
+
+</body>
+
+</html>

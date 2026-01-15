@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Images</title>
+		<style>
+body {
+	font-family: Arial;
+	margin: 0;
+}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.g7,
+		.f7 {
+			margin: 2em 0em 2em 0.6em;
+		}
+
+		.a7 {
+			width: 200px;
+			border-radius: 10px;
+			margin-bottom: 3em;
+		}
+
+		.b7 {
+			width: 200px;
+			height: 200px;
+			object-fit: cover;
+			object-position: left;
+			margin-bottom: 3em;
+		}
+
+		.c7 {
+			width: 200px;
+			height: 200px;
+			object-fit: fill;
+			object-position: left;
+			margin-bottom: 3em;
+			border-radius: 10em;
+		}
+
+		.d7 {
+			margin-bottom: 5em;
+			border-radius: 6px;
+			border: 0.1px solid rgba(128, 128, 128, 0.518);
+			padding: 5px 10px;
+		}
+
+		.e7 {
+			padding: 6px 12px;
+			width: 90%;
+			margin: auto;
+			margin-bottom: 5em;
+			margin-left: 10px;
+			border: none;
+			box-sizing: border-box;
+			box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.31);
+			border-radius: 1em;
+		}
+
+		.f7 {
+			line-height: 1.5;
+		}
+
+		.f7-label {
+			color: rgb(85, 85, 85);
+		}
+
+		.f7-input {
+			margin-bottom: 10px;
+			font-size: large;
+			border: 0.1px solid rgba(0, 0, 0, 0.581);
+			border-radius: 3px;
+			width: 320px;
+		}
+
+		.f7-text {
+			font-size: small;
+			color: rgb(45, 45, 45);
+		}
+
+		.f7-btn {
+			background-color: rgb(0, 128, 255);
+			color: white;
+			border: none;
+			border-radius: 30px;
+			padding: 10px 112px;
+			margin-top: 10px;
+			margin-bottom: 5em;
+			font-size: large;
+		}
+
+		.g7 {
+			margin-bottom: 7em;
+		}
+
+		.g7-img {
+			width: 45px;
+			vertical-align: middle;
+		}
+
+		.g7-input {
+			border: none;
+			padding-left: 6px;
+			padding-right: 45px;
+			font-size: 16px;
+			vertical-align: middle;
+
+		}
+
+		.g7-btn {
+			border: none;
+			padding: 7px 13px;
+			background-color: rgb(0, 128, 255);
+			color: white;
+			border-radius: 10em;
+			vertical-align: middle;
+			font-weight: bolder;
+		}
+
+		.a8 {
+			display: block;
+			margin: 5px 0px;
+		}
+
+		.a8-2 {
+			margin-bottom: 5em;
+		}
+
+		.b8-p {
+			display: inline-block;
+			width: 210px;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+
+		.b8 {
+			margin-bottom: 8em;
+		}
+
+		.c8 {
+			display: flex;
+		}
+
+		.c8-img {
+			margin: auto;
+			margin-bottom: 10px;
+		}
+
+		.c8-input {
+			padding: 6px 12px;
+			margin: auto;
+			width: 90%;
+			margin-bottom: 5em;
+			border: none;
+			box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.31);
+			border-radius: 1em;
+			box-sizing: border-box;
+		}
+
+		div.d8 {
+			margin: auto;
+			margin: 6em 1em;
+			box-sizing: border-box;
+		}
+
+		.d8-1,
+		.d8-2 {
+			display: inline-block;
+			margin-bottom: 8px;
+			margin-right: 3px;
+			width: 20vw;
+		}
+
+		.d8-3 {
+			display: block;
+			margin-bottom: 10px;
+			width: 43vw;
+		}
+
+
+		.d8-input {
+			border: 0.1px solid rgba(0, 0, 0, 0.414);
+			padding: 8px 0px 8px 7px;
+			font-family: Arial;
+			border-radius: 5px;
+		}
+
+		.d8-btn {
+			width: 44vw;
+			color: white;
+			font-family: Arial;
+			background-color: rgb(0, 114, 236);
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			font-weight: bold;
+		}
+
+		div.e8 {
+			margin: auto;
+			margin: 6em 1em;
+			box-sizing: border-box;
+		}
+
+		.e8 {
+			font-family: Arial;
+		}
+
+
+		input.e8 {
+			box-sizing: content-box;
+			display: block;
+			width: 100%;
+			background-color: rgb(227, 227, 227);
+			border: none;
+			padding: 10px 0px 10px 13px;
+			margin-bottom: 10px;
+		}
+
+		.e8-btn-1 {
+			background-color: black;
+			color: white;
+			padding: 10px 18px;
+			border: none;
+			margin-top: 15px;
+
+		}
+
+		.e8-btn-1:hover {
+			background-color: rgb(52, 52, 52);
+		}
+
+		.e8-btn-2 {
+			padding: 10px 18px;
+			border: none;
+			margin-top: 15px;
+
+		}
+		</style>
+	</head>
+
+	<body>
+		<img class="a7" src="jaggnath-mystery.png" alt="jaggnath-mystery"><br>
+		<img class="b7" src="jaggnath-mystery.png" alt="jaggnath-mystery"><br>
+		<img class="c7" src="jaggnath-mystery.png" alt="jaggnath-mystery"><br>
+		<hr>
+		<h2 style="margin-bottom: 5em;">VII(I). Images Completed</h2>
+		<hr>
+		<input class="d7" type="text" placeholder="Search"><br>
+		<input class="e7" type="text" placeholder="Search Google or type a URL"><br>
+		<hr>
+		<div class="f7">
+			<h2>LinkedIn Signup</h2>
+			<label class="f7-label" for="email">Email</label><br>
+			<input class="f7-input" type="text" id="email" required>
+			<div class="f7-text">By clicking Agree & Join, you agree to the Privacy Policy.</div>
+			<button class="f7-btn">Agree & Join</button>
+		</div>
+		<hr>
+		<div class="g7">
+			<h2>Twitter Text Box</h2>
+
+			<img class="g7-img" src="favicon.png" alt="Jaggnath-mystery">
+			<input class="g7-input" type="text" placeholder="What's happening?">
+			<button class="g7-btn">Tweet</button>
+		</div>
+		<hr>
+		<h2 style="margin-bottom: 1em;">VII(II). TEXT-BOX Completed</h2>
+		<hr>
+		<h1 style="margin-bottom: 5em;">VII. Images & Text-Box Completed.</h1>
+		<h2>VIII. Display Property</h2>
+		<hr>
+		<input type="text" placeholder="Name" class="a8 a8-1">
+		<input type="text" placeholder="Email" class="a8 a8-2">
+
+
+		<p class="b8-p">Thanks for chatting with our customer support. Would you like to take our quick survey?</p>
+		<button class="b8 b8-btn-1">Yes</button>
+		<button class="b8 b8-btn-2">No</button>
+
+		<a href="https://google.com">
+			<img src="google-logo.png" alt="google-logo" class="c8 c8-img">
+		</a>
+		<input class="c8-input c8" type="text" placeholder="Search Google or type a URL"><br>
+		<hr>
+		<h2 class="d8">Sign up form</h2>
+		<div class="d8"><input type="text" class="d8 d8-input d8-1" placeholder="First Name" required>
+			<input type="text" class="d8 d8-input d8-2" placeholder="Last Name" required>
+			<input type="email" class="d8 d8-input d8-3" placeholder="Email" required>
+			<button type="submit" class="d8 d8-btn">Sign Up</button>
+		</div>
+		<hr>
+
+		<div class="e8">
+			<h2>
+				Request a ride now
+			</h2>
+
+			<input type="text" class="e8 e8-1" placeholder="Enter pickup location">
+			<input type="text" class="e8 e8-2" placeholder="Enter destination">
+			<button class="e8 e8-btn-1">Request now</button>
+			<button class="e8 e8-btn-2">Schedule for later</button>
+		</div>
+	</body>
+
+</html>

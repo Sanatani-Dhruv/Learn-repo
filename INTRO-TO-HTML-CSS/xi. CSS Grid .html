@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .a11 {
+            display: grid;
+            grid-template-columns: 200px 75px;
+            margin-bottom: 30px;
+        }
+
+        .a11-1 {
+            background-color: lightblue;
+        }
+
+        .a11-2 {
+            background-color: lightpink;
+        }
+
+        .b11 {
+            display: grid;
+            grid-template-columns: 50px 1fr 75px;
+            margin-bottom: 30px;
+
+        }
+
+        .b11-1 {
+            background-color: lightblue;
+        }
+
+        .b11-2 {
+            background-color: lightpink;
+        }
+
+        .b11-3 {
+            background-color: lightblue;
+        }
+
+        .c11 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px 20px;
+            /* or */
+            row-gap: 10px;
+            column-gap: 20px;
+            margin-bottom: 3em;
+        }
+
+        .c11-grid-item {
+            background-color: lightpink;
+        }
+
+        /* Main Content */
+        .d11-box-box {
+            width: min-content;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 10px 0px 2em 10px;
+        }
+
+        .d11-box {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto 1fr;
+            border-radius: 2px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.474);
+            width: 150px;
+            font-family: Arial;
+            transition: all 0.15s;
+        }
+
+        .d11-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 2px 2px 0px 0px;
+            object-fit: cover;
+        }
+
+        .d11-1 {
+            font-weight: bold;
+            padding: 10px 0px 0px 5px;
+        }
+
+        .d11-2 {
+            display: grid;
+            grid-template-columns: 25px 1fr;
+            gap: 0px 5px;
+            align-items: center;
+            padding: 5px 0px 10px 5px;
+            color: rgb(106, 106, 106);
+            font-size: small;
+        }
+
+        .d11-2-1 {
+            width: 23px;
+            height: 23px;
+            border-radius: 10em;
+        }
+
+        .d11-btn {
+            background-color: rgb(22, 96, 255);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 7px 14px;
+            font-family: Arial;
+            margin: 0px 0px 7px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a11">
+        <div class="a11-1">200px</div>
+        <div class="a11-2">75px</div>
+    </div>
+
+    <div class="b11">
+        <div class="b11-1">col1</div>
+        <div class="b11-2">col2</div>
+        <div class="b11-3">col3</div>
+    </div>
+
+    <div class="c11">
+        <div class="c11-1 c11-grid-item">col1</div>
+        <div class="c11-2 c11-grid-item">col2</div>
+        <div class="c11-3 c11-grid-item">col3</div>
+        <div class="c11-4 c11-grid-item">col4</div>
+        <div class="c11-5 c11-grid-item">col1</div>
+        <div class="c11-6 c11-grid-item">col2</div>
+        <div class="c11-7 c11-grid-item">col3</div>
+        <div class="c11-8 c11-grid-item">col4</div>
+    </div>
+
+    <div class="d11 d11-box-box">
+        <div class="d11-box">
+            <img src="profile-1.jpg" alt="Profile-Picture" class="d11 d11-img">
+            <div class="d11 d11-1 Name">Oliver</div>
+            <div class="d11 d11-2 same-frnd-box">
+                <img src="profile-4.jpg" class="d11-2-1" alt="DP">
+                <div class="d11 d11-2-2 same-frnd">2 mutual friends</div>
+            </div>
+            <button class="d11 d11-btn">Add Friend</button>
+        </div>
+        <div class="d11-box">
+            <img src="profile-2.jpg" alt="Profile-Picture" class="d11 d11-img">
+            <div class="d11 d11-1 Name">Mimi</div>
+            <div class="d11 d11-2 same-frnd-box">
+                <img src="profile-4.jpg" class="d11-2-1" alt="DP">
+                <div class="d11 d11-2-2 same-frnd">3 mutual friends</div>
+            </div>
+            <button class="d11 d11-btn">Add Friend</button>
+        </div>
+        <div class="d11-box">
+            <img src="profile-3.jpg" alt="Profile-Picture" class="d11 d11-img">
+            <div class="d11 d11-1 Name">Rex</div>
+            <div class="d11 d11-2 same-frnd-box">
+                <img src="profile-4.jpg" class="d11-2-1" alt="DP">
+                <div class="d11 d11-2-2 same-frnd">4 mutual friends</div>
+            </div>
+            <button class="d11 d11-btn">Add Friend</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

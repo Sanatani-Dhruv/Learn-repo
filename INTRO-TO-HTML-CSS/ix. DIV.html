@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div</title>
+    <style>
+        body {
+            font-family: 'Tahoma';
+        }
+
+        .a9 {
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 5em;
+        }
+
+        .b9 {
+            background-color: green;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            margin-bottom: 5em;
+        }
+
+        .c9 {
+            font-family: Arial;
+        }
+
+        div.c9 {
+            font-family: Arial;
+            border: 1px solid black;
+            padding: 5px 10px 15px 10px;
+            margin-bottom: 5em;
+        }
+
+        div.d9 {
+            margin-bottom: 5em;
+            font-family: Arial;
+            background-color: rgb(47, 47, 47);
+            padding: 10px 10px 2px 15px;
+            max-width: min(361px, 100%);
+        }
+
+        .d9-1 {
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        .d9-2 {
+            color: rgb(164, 164, 164);
+            padding-bottom: 0px;
+        }
+
+        div.e9 {
+            margin-bottom: 7em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+            padding: 10px 10px;
+            border-radius: 5px;
+            width: 372px;
+            max-width: (372px, 100%);
+        }
+
+        .e9 {
+            font-family: Arial;
+        }
+
+        .e9-img {
+            width: 45px;
+            vertical-align: middle;
+        }
+
+        .e9-input {
+            border: none;
+            font-family: 'Arial';
+            padding-left: 6px;
+            padding-right: 45px;
+            font-size: 16px;
+            vertical-align: middle;
+
+        }
+
+        .e9-btn {
+            border: none;
+            padding: 7px 13px;
+            background-color: rgb(57, 156, 255);
+            color: white;
+            border-radius: 10em;
+            vertical-align: middle;
+            font-weight: bolder;
+        }
+
+        .f9 {
+            font-family: Arial;
+        }
+
+        .f9-box {
+            margin-bottom: 5em;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.474);
+            width: 150px;
+            font-family: Arial;
+        }
+
+        .f9-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .f9-1 {
+            font-weight: bold;
+            padding: 10px 0px 0px 5px;
+        }
+
+        .f9-2 {
+            padding: 5px 0px 10px 5px;
+            color: rgb(106, 106, 106);
+            font-size: small;
+        }
+
+        .f9-btn {
+            margin: 0px 0px 8px 5px;
+            padding: 6px 16px 6px 16px;
+            background-color: rgb(0, 101, 202);
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .g9-box-box {
+            margin-bottom: 5em;
+            border: none;
+            border-radius: 2px;
+            font-family: Arial;
+        }
+
+        .g9-box {
+            border: none;
+            display: inline-block;
+            border-radius: 2px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.474);
+            width: 150px;
+            font-family: Arial;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: all 0.15s;
+        }
+
+        .g9-box:hover {
+            scale: 1.03;
+        }
+
+        .g9-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .g9-1 {
+            font-weight: bold;
+            padding: 10px 0px 0px 5px;
+        }
+
+        .g9-2 {
+            padding: 5px 0px 10px 5px;
+            color: rgb(106, 106, 106);
+            font-size: small;
+        }
+
+        .g9-btn {
+            margin: 0px 0px 8px 5px;
+            padding: 6px 16px 6px 16px;
+            background-color: rgb(0, 101, 202);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-family: Arial;
+        }
+
+        .h9 {
+            font-family: Arial;
+        }
+
+        .h9-box {
+            text-align: center;
+            margin-bottom: 5em;
+        }
+
+
+        .h9-img {
+            width: 176px;
+            margin-bottom: 10px;
+        }
+
+        .h9-input {
+            padding: 6px 12px;
+            width: 60%;
+            border: none;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.31);
+            border-radius: 1em;
+            box-sizing: border-box;
+        }
+
+        .h9-btn-1,
+        .h9-btn-2 {
+            padding: 9px 15px;
+            border: none;
+            margin: 30px 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a9">
+
+    </div>
+
+    <div class="b9">
+
+    </div>
+
+    <div class="c9">
+        <p>Satisfied with our service?</p>
+        <button class="c9 c9-btn-1">Yes</button>
+        <button class="c9 c9-btn-2">No</button>
+    </div>
+
+    <div class="d9">
+        <p class="d9 d9-1">Install YouTube Music</p>
+        <p class="d9 d9-2">Add YouTube Music to your desktop for quick and easy access</p>
+    </div>
+
+    <h2>Twitter Text Box</h2>
+    <div class="e9">
+        <img class="e9-img" src="favicon.png" alt="Jaggnath-mystery">
+        <input class="e9-input" type="text" placeholder="What's happening?">
+        <button class="e9-btn">Tweet</button>
+    </div>
+
+    <div class="f9 f9-box">
+        <img src="profile-1.jpg" alt="Profile-Picture" class="f9 f9-img">
+        <div class="f9 f9-1">Oliver</div>
+        <div class="f9 f9-2">2 mutual friends</div>
+        <button class="f9 f9-btn">Add Friend</button>
+    </div>
+
+
+    <div class="g9 g9-box-box">
+        <div class="g9-box">
+            <img src="profile-1.jpg" alt="Profile-Picture" class="g9 g9-img">
+            <div class="g9 g9-1">Oliver</div>
+            <div class="g9 g9-2">2 mutual friends</div>
+            <button class="g9 g9-btn">Add Friend</button>
+        </div>
+        <div class="g9-box">
+            <img src="profile-2.jpg" alt="Profile-Picture" class="g9 g9-img">
+            <div class="g9 g9-1">Mimi</div>
+            <div class="g9 g9-2">3 mutual friends</div>
+            <button class="g9 g9-btn">Add Friend</button>
+        </div>
+        <div class="g9-box">
+            <img src="profile-3.jpg" alt="Profile-Picture" class="g9 g9-img">
+            <div class="g9 g9-1">Rex</div>
+            <div class="g9 g9-2">4 mutual friends</div>
+            <button class="g9 g9-btn">Add Friend</button>
+        </div>
+    </div>
+
+
+    <div class="h9-box h9">
+        <div class="h9 h9-img-box">
+            <a href="https://google.com">
+                <img src="google-logo.png" alt="google-logo" class="h9 h9-img">
+            </a>
+        </div>
+        <div class="h9 h9-input-box">
+            <input class="h9-input h9" type="text" placeholder="Search Google or type a URL">
+        </div>
+        <div class="h9 h9-btn-box">
+            <button class="h9 h9-btn-1">Google Search</button>
+            <button class="h9 h9-btn-2">I'm Feeling Lucky</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absolute & Relative</title>
+    <style>
+        body {
+            height: 3000px;
+            font-family: Arial;
+        }
+
+        button {
+            font-family: Arial;
+        }
+
+        .d15 {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 320px;
+            height: 180px;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 100;
+        }
+
+
+        .d15-1 {
+            position: absolute;
+            top: -19px;
+            left: -19px;
+            border-radius: 10000em;
+            background-color: black;
+        }
+
+        .d15-btn {
+            color: white;
+            background-color: transparent;
+            border: none;
+            width: 37px;
+            height: 37px;
+            font-size: large;
+            font-weight: 400;
+            font-family: Arial;
+        }
+
+        .d15-2 {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background-color: black;
+            color: white;
+            padding: 3px 7px;
+        }
+
+        .e15 {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+        }
+
+        .e15-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .e15-2 {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            background-color: black;
+            color: white;
+            padding: 8px 10px;
+            font-size: 0.85em;
+            /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.15); */
+            z-index: 80;
+        }
+
+        .f15 {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+        }
+
+        .f15-1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .f15-2 {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            background-color: black;
+            color: white;
+            padding: 8px 10px;
+            font-size: 0.85em;
+            /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.15); */
+            z-index: 80;
+        }
+
+        .f15-3 {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.732);
+            bottom: 4px;
+            left: 0;
+            right: 0;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* opacity: 0;
+            content-visibility: hidden; */
+            transition: all 0.2s;
+            overflow: hidden;
+        }
+
+        /* .f15:hover .f15-3 {
+            opacity: 1;
+            content-visibility: visible;
+        } */
+
+        .f15-btn {
+            border: 1.5px solid black;
+            padding: 7px 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d15">
+        <div class="d15-1">
+            <button class="d15-btn">X</button>
+        </div>
+        <div class="d15-2">0:29</div>
+    </div>
+
+    <div class="e15">
+        <img class="e15-1" src="shirt-shop.jpg" alt="Shop at Pixel-Store">
+        <div class="e15-2">20% OFF</div>
+    </div>
+
+    <div class="f15">
+        <img class="f15-1" src="shirt-shop.jpg" alt="Shop at Pixel-Store">
+        <div class="f15-2">20% OFF</div>
+        <div class="f15-3 add-to-cart-box">
+            <button class="f15-btn">Add to Cart</button>
+        </div>
+    </div>
+</body>
+
+</html>

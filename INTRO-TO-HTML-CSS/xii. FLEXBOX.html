@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .a12 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3em;
+        }
+
+        .a12-1 {
+            width: 200px;
+            background-color: lightblue;
+        }
+
+        .a12-2 {
+            width: 75px;
+            background-color: lightpink;
+        }
+
+        .b12 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3em;
+
+        }
+
+        .b12-1 {
+            background-color: lightblue;
+            width: 53px;
+        }
+
+        .b12-2 {
+            background-color: lightpink;
+            flex: 1;
+        }
+
+        .b12-3 {
+            background-color: lightblue;
+            width: 75px;
+        }
+
+        .c12 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3em;
+            justify-content: space-between;
+        }
+
+        .c12-item {
+            background-color: lightpink;
+        }
+
+        .d12 {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid gray;
+            justify-content: space-between;
+            height: 53px;
+            align-items: center;
+            margin-bottom: 15em;
+        }
+
+        .d12-item {
+            background-color: lightpink;
+        }
+
+        .e12 {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            padding: 7px 10px;
+            gap: 13px;
+            border: 1px solid gray;
+            font-family: Arial;
+            margin-bottom: 10em;
+        }
+
+        .e12-item {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        .e12-sub-item-2 {
+            position: relative;
+            background-color: rgb(19, 86, 255);
+            color: white;
+            border-radius: 20px;
+            padding: 2px 12px;
+            font-weight: bold;
+        }
+
+        /* Not Neccesary, You may Comment this '::after' part */
+        /* .e12-sub-item-2::after {
+            position: absolute;
+            top: -3px;
+            right: 3px;
+            content: "";
+            height: 8px;
+            width: 8px;
+            border-radius: 1000em;
+            background-color: crimson;
+        } */
+
+        .f12 {
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(118, 0, 228);
+            padding: 8px 8px 8px 14px;
+            justify-content: space-between;
+            color: white;
+            font-family: Arial;
+            align-items: center;
+            margin-bottom: 10em;
+        }
+
+        .f12 div,
+        .f12-btn,
+        .f12-input {
+            font-family: Arial;
+        }
+
+        .f12-2 {
+            max-width: 400px;
+            margin: 0 80px 0 73px;
+            flex: 1;
+        }
+
+        .f12-1 {
+            font-weight: bold;
+        }
+
+        .f12-input {
+            box-sizing: border-box;
+            width: 100%;
+            border: none;
+            border-radius: 30em;
+            padding: 5px 0px 5px 20px;
+        }
+
+        .f12-btn {
+            background-color: rgb(118, 0, 228);
+            border: 1px solid white;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 3px;
+            transition: all 0.15s;
+        }
+
+        .f12-btn:hover {
+            background-color: white;
+            color: rgb(118, 0, 228);
+        }
+        
+        .g12 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid gray;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Arial;
+            box-sizing: border-box;
+            margin-bottom: 10em;
+        }
+
+        .g12,
+        .g12-btn {
+            font-family: Arial;
+
+        }
+
+        .g12-item {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .g12-sub-item-2 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .g12-dp {
+            width: 53px;
+            height: 53px;
+            border-radius: 30em;
+            transition: all 0.25s;
+
+        }
+
+        .g12-dp:hover {
+            scale: 1.5;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.749);
+        }
+
+        .g12-name {
+            font-weight: bold;
+        }
+
+        .g12-btn {
+            color: white;
+            background-color: rgb(19, 86, 255);
+            border: none;
+            font-size: 1.0em;
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-weight: bold;
+            transition: all 0.15s, width ease-in-out, height ease-in-out;
+        }
+
+        .g12-btn:hover {
+            background-color: rgb(0, 57, 203);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.325);
+            scale: 1.05;
+
+        }
+
+        .g12-desc {
+            color: gray;
+        }
+
+        .g12-status {
+            color: gray;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a12">
+        <div class="a12-1">200px</div>
+        <div class="a12-2">75px</div>
+    </div>
+
+    <div class="b12">
+        <div class="b12-1">item1</div>
+        <div class="b12-2">item2</div>
+        <div class="b12-3">item3</div>
+    </div>
+
+    <div class="c12">
+        <div class="c12-item c12-1">item1</div>
+        <div class="c12-item c12-2">item2</div>
+        <div class="c12-item c12-3">item3</div>
+        <div class="c12-item c12-4">item4</div>
+    </div>
+
+    <div class="d12">
+        <div class="d12-item d12-1">item1</div>
+        <div class="d12-item d12-2">item2</div>
+    </div>
+
+    <div class="e12">
+        <div class="e12-item e12-1">
+            <div class="e12-sub-item-1">Home</div>
+            <div class="e12-sub-item-2">14</div>
+        </div>
+        <div class="e12-item e12-2">
+            <div class="e12-sub-item-1">Notifications</div>
+            <div class="e12-sub-item-2">3</div>
+        </div>
+        <div class="e12-item e12-3">
+            <div class="e12-sub-item-1">Messages</div>
+            <div class="e12-sub-item-2">5</div>
+        </div>
+    </div>
+
+    <div class="f12">
+        <div class="f12-1 f12-item">Home</div>
+        <div class="f12-2 f12-item">
+            <input class="f12-input" type="text" placeholder="Search">
+        </div>
+        <div class="f12-3 f12-item">
+            <button class="f12-btn">
+                Download
+            </button>
+        </div>
+    </div>
+
+    <div class="g12">
+        <div class="g12-item g12-1">
+            <div class="g12-sub-item  g12-sub-item-1">
+                <img class="g12-dp" onclick="" src="profile-1.jpg" alt="">
+            </div>
+            <div class="g12-sub-item  g12-sub-item-2">
+                <div class="g12-name">Oliver</div>
+                <div class="g12-desc">the cat</div>
+                <div class="g12-status">Popular</div>
+            </div>
+            <div class="g12-sub-item  g12-sub-item-3">
+                <button class="g12-btn">
+                    Follow
+                </button>
+            </div>
+        </div>
+        <div class="g12-item g12-1">
+            <div class="g12-sub-item g12-sub-item-1">
+                <img class="g12-dp" src="profile-2.jpg" alt="">
+            </div>
+            <div class="g12-sub-item g12-sub-item-2">
+                <div class="g12-name">Mimi</div>
+                <div class="g12-desc">Sleepy Cat</div>
+                <div class="g12-status">Popular</div>
+            </div>
+            <div class="g12-sub-item g12-sub-item-3">
+                <button class="g12-btn">
+                    Follow
+                </button>
+            </div>
+        </div>
+        <div class="g12-item g12-1">
+            <div class="g12-sub-item g12-sub-item-1">
+                <img class="g12-dp" src="profile-3.jpg" alt="">
+            </div>
+            <div class="g12-sub-item g12-sub-item-2">
+                <div class="g12-name">Rex</div>
+                <div class="g12-desc">Happy Bulldog</div>
+                <div class="g12-status">Popular</div>
+            </div>
+            <div class="g12-sub-item g12-sub-item-3">
+                <button class="g12-btn">
+                    Follow
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

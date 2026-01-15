@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Fixed</title>
+    <style>
+        body {
+            height: 2000px;
+            font-family: Arial;
+            background-color: whitesmoke;
+        }
+
+        .f14 {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .f14-dps {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0px 0px 10px;
+            gap: 7px;
+            width: 50px;
+            background-color: rgb(36, 36, 36);
+            overflow-y: auto;
+        }
+
+        .f14-infos {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 15px;
+            background-color: rgb(58, 58, 58);
+            color: white;
+            gap: 10px;
+            width: 130px;
+            overflow-y: auto;
+
+        }
+
+        .f14-title {
+            font-size: 0.75em;
+        }
+
+        .f14-add-icon {
+            font-size: 1.3em;
+            color: rgb(150, 150, 150);
+        }
+
+        .f14-info {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .f14-img {
+            border-radius: 100em;
+            width: 40px;
+            height: 40px;
+        }
+
+        .f14-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            color: rgb(150, 150, 150);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="f14">
+        <div class="f14-1 f14-dps">
+            <img class="f14-img f14-img-1" src="profile-1.jpg" alt="">
+            <img class="f14-img f14-img-2" src="profile-2.jpg" alt="">
+            <img class="f14-img f14-img-3" src="profile-3.jpg" alt="">
+            <!-- Not Neccessary below-->
+            <!-- <img class="f14-img f14-img-4" src="profile-4.jpg" alt="">
+            <img class="f14-img f14-img-1" src="profile-1.jpg" alt="">
+            <img class="f14-img f14-img-2" src="profile-2.jpg" alt="">
+            <img class="f14-img f14-img-3" src="profile-3.jpg" alt="">
+            <img class="f14-img f14-img-4" src="profile-4.jpg" alt="">
+            <img class="f14-img f14-img-1" src="profile-1.jpg" alt="">
+            <img class="f14-img f14-img-2" src="profile-2.jpg" alt="">
+            <img class="f14-img f14-img-3" src="profile-3.jpg" alt="">
+            <img class="f14-img f14-img-4" src="profile-4.jpg" alt=""> -->
+
+        </div>
+        <div class="f14-2 f14-infos">
+            <div class="f14-2-1 f14-info">
+                <div class="f14-2-1-1 f14-title">INFO</div>
+                <div class="f14-2-1-2 f14-add-icon">+</div>
+            </div>
+            <div class="f14-2-2 f14-channels">
+                <div class="f14-2-2-1 f14-channel"># new-videos</div>
+                <div class="f14-2-2-2 f14-channel"># updates</div>
+                <div class="f14-2-2-3 f14-channel"># faq</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

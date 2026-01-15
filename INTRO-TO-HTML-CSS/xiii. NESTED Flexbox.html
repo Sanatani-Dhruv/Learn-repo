@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Flexbox</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+
+        .a13 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 1em;
+        }
+
+        .a13-1 {
+            background-color: lightpink;
+            width: 100px;
+            height: 53px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .a13-1-1 {
+            background-color: black;
+            color: white;
+        }
+
+        .a13-2 {
+            background-color: lightblue;
+            width: 200px;
+        }
+
+        /* Not Needed, You may remove this */
+        .a13-2-draft {
+            flex: 1;
+        }
+
+        .b13 {
+            display: flex;
+            margin-bottom: 10em;
+        }
+
+        .b13-1 {
+            background-color: lightpink;
+            width: 100px;
+            height: 53px;
+        }
+
+        .b13-2 {
+            background-color: lightblue;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .b13-2-2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .b13-2-2-1,
+        .b13-2-2-2 {
+            background-color: black;
+            color: white;
+        }
+
+        .c13 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2em;
+        }
+
+        .c13-img {
+            width: 98%;
+            border-radius: 1em;
+        }
+
+        .c13-1,
+        .c13-2 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1em;
+
+        }
+
+        .c13-stat {
+            margin: 0;
+        }
+
+        .d13 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 12px;
+            font-family: Arial;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-bottom: 5em;
+        }
+
+        .d13-inboxes {
+            font-size: 0.8em;
+            color: rgb(97, 97, 97);
+        }
+
+        .d13-messages {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .d13-message-detail {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 7px 0px;
+        }
+
+        .d13-name-time {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 5px 0px 0px;
+            align-items: center;
+        }
+
+        .d13-name {
+            flex: 1;
+            font-weight: bold;
+            font-size: 1.15em;
+        }
+
+        .d13-time {
+            color: rgb(97, 97, 97);
+        }
+
+        .d13-subject {
+            font-weight: bold;
+            flex: 1;
+
+        }
+
+        .d13-desc {
+            color: rgb(97, 97, 97);
+            flex: 1;
+            font-size: 0.98em;
+        }
+
+        .d13-dp-box {
+            height: 50px;
+            width: 50px;
+            margin: 10px 0px;
+            box-sizing: border-box;
+        }
+
+        .d13-dp {
+            width: 100%;
+            height: 100%;
+            border-radius: 100em;
+        }
+
+        .e13 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 12px;
+            font-family: Arial;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-bottom: 5em;
+        }
+
+        .e13-inboxes {
+            font-size: 0.8em;
+            color: rgb(97, 97, 97);
+        }
+
+        .e13-message-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .e13-message-detail {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 7px 0px;
+        }
+
+        .e13-name-time {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 5px 0px 0px;
+            align-items: center;
+        }
+
+        .e13-name {
+            flex: 1;
+            font-weight: bold;
+            font-size: 1.15em;
+            transition: all 0.45s;
+            cursor: pointer;
+        }
+
+        .e13-name:hover {
+            text-decoration: 1.2px solid underline;
+        }
+
+        .e13-time {
+            color: rgb(97, 97, 97);
+        }
+
+        .e13-subject {
+            font-weight: bold;
+            flex: 1;
+
+        }
+
+        .e13-desc {
+            color: rgb(97, 97, 97);
+            flex: 1;
+            font-size: 0.98em;
+        }
+
+        .e13-dp-box {
+            height: 50px;
+            width: 50px;
+            margin: 10px 0px;
+            box-sizing: border-box;
+        }
+
+        .e13-dp {
+            width: 100%;
+            height: 100%;
+            border-radius: 100em;
+        }
+
+        .f13 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2em;
+        }
+
+        .f13-img {
+            width: 98%;
+        }
+
+        .f13-1,
+        .f13-2 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .f13-stat {
+            margin: 0;
+        }
+
+        .g13 {
+            font-family: Arial;
+            box-sizing: border-box;
+            border: 1px solid rgb(213, 213, 213);
+            border-radius: 5px;
+            padding: 13px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .g13-dp-box {
+            width: 50px;
+            height: 50px;
+        }
+
+        .g13-dp-box img {
+            border-radius: 100em;
+            width: 100%;
+            height: 100%;
+        }
+
+        .g13-main-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4em;
+        }
+
+        .g13-name-box {
+            display: flex;
+            gap: 5px;
+        }
+
+        .g13-name {
+            font-weight: bold;
+        }
+
+        .g13-userid {
+            color: rgb(97, 97, 97);
+            flex: 1;
+        }
+
+        /* Not Neccessary */
+        /* .g13-message {
+            font-size: 1.1em;
+        } */
+
+        .g13-video-prev {
+            display: flex;
+            box-sizing: border-box;
+            border: 2px solid rgb(226, 226, 226);
+            border-radius: 15px;
+            margin-top: 8px;
+        }
+
+        .g13-video-prev-img {
+            width: 110px;
+            height: 100%;
+            display: flex;
+            cursor: pointer;
+        }
+
+        .g13-video-prev-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px 0px 0px 13px;
+        }
+
+        .g13-video-details {
+            padding: 13px 14px;
+            flex: 1;
+        }
+
+        .g13-url {
+            color: rgb(97, 97, 97);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a13">
+        <div class="a13-1">
+            <div class="a13-1-1">item1</div>
+        </div>
+        <div class="a13-2"></div>
+    </div>
+
+    <div class="a13 a13-draft">
+        <div class="a13-1">
+            <div class="a13-1-1">item1</div>
+        </div>
+        <div class="a13-2 a13-2-draft"><!--Not Needed, You may remove this whole a13-draft-div --></div>
+    </div>
+
+    <div class="b13">
+        <div class="b13-1"></div>
+        <div class="b13-2">
+            <div class="b13-2-1">row1</div>
+            <div class="b13-2-2">
+                <div class="b13-2-2-1">row2</div>
+                <div class="b13-2-2-2">row2</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c13-box">
+        <h2>This is just Nested Layouts Design of This Image</h2>
+        <div class="c13">
+            <div class="c13-1">
+                <h4 class="c13-stat">Before :</h4>
+                <img class="c13-img" src="c13-before.png" alt="Before">
+            </div>
+            <div class="c13-2">
+                <h4 class="c13-stat">After : </h4>
+                <img class="c13-img" src="c13-after.png" alt="After">
+            </div>
+        </div>
+    </div>
+
+    <div class="d13">
+        <div class="d13-1 d13-inboxes">ALL INBOXES</div>
+        <div class="d13-2 d13-messages">
+            <div class="d13-2-1 d13-dp-box">
+                <img class="d13-dp" src="profile-1.jpg" alt="">
+            </div>
+            <div class="d13-2-2 d13-message-detail">
+                <div class="d13-2-2-1 d13-name-time">
+                    <div class="d13-2-2-1-1 d13-name">Chewy Promotions</div>
+                    <div class="d13-2-2-1-2 d13-time">4:58 PM</div>
+                </div>
+                <div class="d13-2-2-2 d13-subject">Biggest sales of the year!</div>
+                <div class="d13-2-2-3 d13-desc">Hey there! We're writing to tell you about our...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="e13">
+        <div class="e13-1 e13-inboxes">ALL INBOXES</div>
+        <div class="e13-2 e13-message-box">
+            <div class="e13-2-1 e13-dp-box">
+                <img class="e13-dp" src="profile-1.jpg" alt="">
+            </div>
+            <div class="e13-2-2 e13-message-detail">
+                <div class="e13-2-2-1 e13-name-time">
+                    <div class="e13-2-2-1-1 e13-name">Chewy Promotions</div>
+                    <div class="e13-2-2-1-2 e13-time">4:58 PM</div>
+                </div>
+                <div class="e13-2-2-2 e13-subject">Biggest sales of the year!</div>
+                <div class="e13-2-2-3 e13-desc">Hey there! We're writing to tell you about our...</div>
+            </div>
+        </div>
+        <div class="e13-2 e13-message-box">
+            <div class="e13-2-1 e13-dp-box">
+                <img class="e13-dp" src="profile-2.jpg" alt="">
+            </div>
+            <div class="e13-2-2 e13-message-detail">
+                <div class="e13-2-2-1 e13-name-time">
+                    <div class="e13-2-2-1-1 e13-name">Best Buy</div>
+                    <div class="e13-2-2-1-2 e13-time">12:32 PM</div>
+                </div>
+                <div class="e13-2-2-2 e13-subject">Your Best Buy eReceipt</div>
+                <div class="e13-2-2-3 e13-desc">Thank you for shopping at Best Buy, here is...</div>
+            </div>
+        </div>
+        <div class="e13-2 e13-message-box">
+            <div class="e13-2-1 e13-dp-box">
+                <img class="e13-dp" src="profile-4.jpg" alt="">
+            </div>
+            <div class="e13-2-2 e13-message-detail">
+                <div class="e13-2-2-1 e13-name-time">
+                    <div class="e13-2-2-1-1 e13-name">Netflix</div>
+                    <div class="e13-2-2-1-2 e13-time">9:00 AM</div>
+                </div>
+                <div class="e13-2-2-2 e13-subject">Here's what's coming soon to Netflix</div>
+                <div class="e13-2-2-3 e13-desc">Brand new movies and shows, old favorites...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="f13-box">
+        <h2>This is just Nested Layouts Design of This Image</h2>
+        <div class="f13">
+            <div class="f13-1">
+                <h4 class="f13-stat">Before :</h4>
+                <img class="f13-img" src="f13-before.png" alt="Before">
+            </div>
+            <div class="f13-2">
+                <h4 class="f13-stat">After : </h4>
+                <img class="f13-img" src="f13-after.png" alt="After">
+            </div>
+        </div>
+    </div>
+
+    <div class="g13">
+        <div class="g13-1 g13-dp-box">
+            <img src="profile-1.jpg" alt="">
+        </div>
+        <div class="g13-2 g13-main-box">
+            <div class="g13-2-1 g13-name-box">
+                <div class="g13-2-1-1 g13-name">supersimple.dev</div>
+                <div class="g13-2-1-2 g13-userid">
+                    <a href="https://twitter.com/SuperSimpleDev" target="_blank" rel="noopener noreferrer">
+                        @SuperSimpleDev
+                    </a>
+                </div>
+            </div>
+            <div class="g13-2-2 g13-message">
+                What is backend web development? A complete overview. New video is up!
+            </div>
+            <div class="g13-2-3 g13-video-prev">
+                <div class="g13-2-3-1 g13-video-prev-img">
+                    <a href="https://youtu.be/XBu54nfzxAQ?si=9xYHIfA1pDl-i2ob">
+                        <img src="backend-prev1.webp" alt="What is Backend" srcset="">
+                    </a>
+                </div>
+                <div class="g13-2-3-2 g13-video-details">
+                    <div class="g13-2-3-2-1 g13-url">
+                        <a href="https://www.youtube.com" target="_blank">
+                            youtube.com
+                        </a>
+                    </div>
+                    <div class="g13-2-3-2-2 g13-video-title">
+                        <a href="https://youtu.be/XBu54nfzxAQ?si=9xYHIfA1pDl-i2ob" target="_blank"
+                            rel="noopener noreferrer">
+                            Backend web development - a complete overview (2021)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

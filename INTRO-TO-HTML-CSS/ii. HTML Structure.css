@@ -1,0 +1,18 @@
+body {
+    font-family: "Montserrat";
+}
+
+.head {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.main {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main span {
+    text-decoration: 2px solid underline;
+}
