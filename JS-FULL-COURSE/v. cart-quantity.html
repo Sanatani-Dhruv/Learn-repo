@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>V. Cart Quantity</title>
+		<style>
+button {
+	border: none;
+	padding: 6px 12px;
+	background-color: cyan;
+	color: black;
+	border-radius: 5px;
+}
+
+.cart-5-2, .cart-5-3 {
+	background-color: rgba(66,255,0,1);
+}
+
+.cart-5-5 {
+	background-color: red;
+	color: white;
+}
+
+.cart-5 {
+	text-align: center;
+}
+		</style>
+	</head>
+	<body>
+		<div class="cart-5">
+			<p id="box" style="font-size: 1.15rem;">Cart Quantity: 0</p>
+			<button class="cart-5-1" onclick="
+			console.log(`Cart Quantity: ${cartQuantity}`);
+			">
+				Log in Console
+			</button>
+			<button class="cart-5-2" onclick="
+			box.innerText = `Cart Quantity: ${cartQuantity}`;
+			alert(`${cartQuantity} items added to cart`);
+			">
+				Add to Cart
+			</button>
+			<button class="cart-5-3" onclick="
+			cartQuantity += 1;
+			box.innerText = `Cart Quantity: ${cartQuantity}`;
+			">
+				+1
+			</button>
+			<button class="cart-5-4" onclick="
+			cartQuantity -= 1;
+			box.innerText = `Cart Quantity: ${cartQuantity}`;
+				">
+				-1
+			</button>
+			<button class="cart-5-5" onclick="
+			cartQuantity = 0;
+			box.innerText = `Cart Quantity: ${cartQuantity}`;
+				">
+				Reset Cart
+			</button>
+			<br>
+			<br>
+		</div>
+
+		<script>
+			let cartQuantity = 0;
+			const box = document.getElementById('box');
+		</script>
+	</body>
+</html>
+
+
