@@ -5,7 +5,7 @@
 	<title>V. Variables Extends</title>
 </head>
 <body>
-	
+	<p id="box"></p>
 	<script>
 		let name = 'Dhruv';
 		console.log(`My name is ${name}`);
@@ -13,10 +13,14 @@
 		let cost = (5 + 3 + (2 * 3) + 9);
 		let tax = cost * 10 / 100;
 		let totalCost = cost + tax;
+		const box = document.getElementById("box");
 
 		console.log(`Cost of food: $${cost}`);
+		box.innerHTML = `Cost of food: $${cost}`;
 		console.log(`Tax (10%): $${tax}`);
+		box.innerHTML += `<br>Tax (10%): $${tax}`;
 		console.log(`Total Cost: $${totalCost}`);
+		box.innerHTML += `<br>Total Cost: $${totalCost}`;
 	</script>
 </body>
 </html>
