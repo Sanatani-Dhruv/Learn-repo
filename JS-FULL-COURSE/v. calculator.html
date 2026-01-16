@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+		<title>Calculator</title>
+		<style>
+* {
+	font-family: monospace;
+		box-sizing: border-box;
+}
+
+main {
+	text-align: center;
+	margin: 1rem auto 1rem;
+	padding: 1rem 1rem 1rem;
+	width: max-content;
+	border: 1px solid black;
+	background-color: lightgrey;
+}
+
+#box {
+	background-color: rgba(167,167,167,1);
+	border: 1.5px solid rgba(87,87,87,1);
+	min-width: 12px;
+	height: 32px;
+	width: 100%;
+	margin: 0 auto 1rem;
+	min-height: 10px;
+	line-height: 1.15;
+	padding: 10px 15px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+	button {
+		border: 1px solid grey;
+		background-color: lightgreen;
+		padding: 10px 12px;
+		color: black;
+		margin-bottom: 0.45rem;
+	}
+		</style>
+	</head>
+	<body>
+		<main>
+			<p id="box"></p>
+			<div>
+				<button class="btn-1" onclick="
+				calculation += '1';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">1</button>
+				<button class="btn-2" onclick="
+				calculation += '2';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">2</button>
+				<button class="btn-3" onclick="
+				calculation += '3';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">3</button>
+			</div>
+			<div>
+				<button class="btn-1" onclick="
+						  calculation += '4';
+						  console.log(calculation);
+						  box.innerHTML = calculation;
+						  ">4</button>
+				<button class="btn-2" onclick="
+				calculation += '5';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">5</button>
+				<button class="btn-3" onclick="
+				calculation += '6';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">6</button>
+			</div>
+			<div>
+				<button class="btn-1" onclick="
+				calculation += '7';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">7</button>
+				<button class="btn-2" onclick="
+				calculation += '8';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">8</button>
+				<button class="btn-3" onclick="
+				calculation += '9';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">9</button>
+			</div>
+			<div>
+				<button class="btn-4" onclick="
+				calculation += '+';
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">+</button>
+				<button class="btn-5" onclick="
+				calculation = eval(calculation);
+				console.log(calculation);
+				box.innerHTML = calculation;
+				">=</button>
+				<button class="btn-6" onclick="
+				calculation = '';
+				box.innerHTML = ``;
+				">R</button>
+			</div>
+
+
+			<script>
+				let calculation = '';
+				const box = document.getElementById('box');
+				box.innerHTML = calculation;
+			</script>
+		</main>
+	</body>
+</html>
