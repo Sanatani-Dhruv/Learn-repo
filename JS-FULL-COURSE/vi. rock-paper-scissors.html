@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+		<title>VI. Rock Paper Scissors</title>
+	</head>
+	<body>
+		<h2 id="title">Rock Paper Scissors</h2>
+		<button class="choice-1" onclick="
+		myMove = 'rock';
+		randomNum = Math.random();
+		if (randomNum < 1/3) {
+			computerMove = 'rock';
+		} else if(randomNum > 1/3 && randomNum > 2/3) {
+			computerMove = 'paper';
+		} else {
+			computerMove = 'scissors';
+		}
+		if (computerMove === 'paper') {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+		computerScore++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		} else if (computerMove === 'scissors') {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
+		yourScore++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		} else {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+		draw++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		}
+		">Rock</button>
+		<button class="choice-2" onclick="
+		myMove = 'paper';
+		randomNum = Math.random();
+		if (randomNum < 1/3) {
+			computerMove = 'rock';
+		} else if(randomNum > 1/3 && randomNum > 2/3) {
+			computerMove = 'paper';
+		} else {
+			computerMove = 'scissors';
+		}
+		if (computerMove === 'paper') {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+		computerScore++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		} else if (computerMove === 'scissors') {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
+		yourScore++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		} else {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+		draw++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		}"
+>Paper</button>
+		<button class="choice-3" onclick="
+		myMove = 'scissors';
+		randomNum = Math.random();
+		if (randomNum < 1/3) {
+			computerMove = 'rock';
+		} else if(randomNum > 1/3 && randomNum > 2/3) {
+			computerMove = 'paper';
+		} else {
+			computerMove = 'scissors';
+		}
+		if (computerMove === 'paper') {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+		computerScore++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		} else if (computerMove === 'scissors') {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
+		yourScore++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		} else {
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+		draw++;
+		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+		}
+		">Scissors</button>
+		<p id="box"></p>
+		<div id="big-box"></div>
+		<script>
+			const box = document.getElementById('box');
+			const bigBox = document.getElementById('big-box');
+			let computerMove = '';
+			let myMove = '';
+			let yourScore = 0;
+			let computerScore = 0;
+			let draw = 0;
+		</script>
+	</body>
+</html>
