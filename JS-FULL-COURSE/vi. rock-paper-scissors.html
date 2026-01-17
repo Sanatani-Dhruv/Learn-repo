@@ -42,15 +42,15 @@
 		}
 		if (computerMove === 'paper') {
 		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
-		computerScore++;
+		draw++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else if (computerMove === 'scissors') {
 		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
-		yourScore++;
+		computerScore++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else {
 		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
-		draw++;
+		yourScore++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		}"
 >Paper</button>
@@ -66,7 +66,7 @@
 		}
 		if (computerMove === 'paper') {
 		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
-		computerScore++;
+		yourScore++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else if (computerMove === 'scissors') {
 		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
@@ -74,7 +74,7 @@
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else {
 		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
-		draw++;
+		computerScore++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		}
 		">Scissors</button>
