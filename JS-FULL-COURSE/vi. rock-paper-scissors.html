@@ -11,7 +11,7 @@
 		randomNum = Math.random();
 		if (randomNum < 1/3) {
 			computerMove = 'rock';
-		} else if(randomNum > 1/3 && randomNum > 2/3) {
+		} else if(randomNum > 1/3 && randomNum < 2/3) {
 			computerMove = 'paper';
 		} else {
 			computerMove = 'scissors';
@@ -35,21 +35,21 @@
 		randomNum = Math.random();
 		if (randomNum < 1/3) {
 			computerMove = 'rock';
-		} else if(randomNum > 1/3 && randomNum > 2/3) {
+		} else if(randomNum > 1/3 && randomNum < 2/3) {
 			computerMove = 'paper';
 		} else {
 			computerMove = 'scissors';
 		}
 		if (computerMove === 'paper') {
-		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
 		computerScore++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else if (computerMove === 'scissors') {
-		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
 		yourScore++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else {
-		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
 		draw++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		}"
@@ -59,21 +59,21 @@
 		randomNum = Math.random();
 		if (randomNum < 1/3) {
 			computerMove = 'rock';
-		} else if(randomNum > 1/3 && randomNum > 2/3) {
+		} else if(randomNum > 1/3 && randomNum < 2/3) {
 			computerMove = 'paper';
 		} else {
 			computerMove = 'scissors';
 		}
 		if (computerMove === 'paper') {
-		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
 		computerScore++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else if (computerMove === 'scissors') {
-		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
-		yourScore++;
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+		draw++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		} else {
-		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+		box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
 		draw++;
 		bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
 		}
