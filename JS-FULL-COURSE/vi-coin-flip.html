@@ -11,15 +11,15 @@
 		let randomNum = Math.random();
 		const box = document.getElementById('box');
 		// box.innerHTML = `${randomNum}:<br> `;
+		let result = '';
+
 		if (randomNum < 0.5) {
-			box.innerHTML = "Heads";
-			// box.innerHTML += "Heads";
-			console.log('Heads');
+			result = "Heads";
 		} else {
-			box.innerHTML = "Tails";
-			// box.innerHTML += "Tails";
-			console.log('Tails');
+			result = "Tails";
 		}
+		box.innerHTML = result;
+		console.log(result);
 	</script>
 </body>
 </html>
