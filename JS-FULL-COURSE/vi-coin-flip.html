@@ -11,13 +11,8 @@
 		let randomNum = Math.random();
 		const box = document.getElementById('box');
 		// box.innerHTML = `${randomNum}:<br> `;
-		let result = '';
+		let result = (randomNum < 0.5) ? "Heads" : "Tails";
 
-		if (randomNum < 0.5) {
-			result = "Heads";
-		} else {
-			result = "Tails";
-		}
 		box.innerHTML = result;
 		console.log(result);
 	</script>
