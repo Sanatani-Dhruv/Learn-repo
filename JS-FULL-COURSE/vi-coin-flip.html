@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+	<title>VI. Coin Flip</title>
+</head>
+<body>
+	<p id="box"></p>
+
+	<script>
+		let randomNum = Math.random();
+		const box = document.getElementById('box');
+		// box.innerHTML = `${randomNum}:<br> `;
+		if (randomNum < 0.5) {
+			box.innerHTML = "Heads";
+			// box.innerHTML += "Heads";
+			console.log('Heads');
+		} else {
+			box.innerHTML = "Tails";
+			// box.innerHTML += "Tails";
+			console.log('Tails');
+		}
+	</script>
+</body>
+</html>

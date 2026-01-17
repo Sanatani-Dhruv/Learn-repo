@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+	<title>VI - D</title>
+</head>
+<body>
+	<p id="box"></p>
+	
+	<script>
+		let age = 18;
+		const box = document.getElementById('box');
+		if (age > 0 && age < 120) {
+			let message = (age < 6 || age > 65) ? "Discount for You!" : "No Discount for You!";
+
+			box.innerHTML = message;
+			console.log(message);
+		} else {
+			box.innerHTML = 'Give Valid Age!';
+			console.log('Give Valid Age!');
+		}
+	</script>
+</body>
+</html>

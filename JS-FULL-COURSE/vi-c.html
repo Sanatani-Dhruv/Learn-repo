@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+	<title>VI - C</title>
+</head>
+<body>
+	<p id="box"></p>
+	<script>
+		const date = new Date();
+		const box = document.getElementById('box');
+		hour = 16;
+
+		let name = 'Dhruv';
+		// hour = date.getHours();
+
+		if (hour > 6 && hour < 12) {
+			box.innerHTML = `Good Morning ${name}!`;
+			console.log(`Good Morning ${name}!`);
+		} else if (hour > 13 && hour < 15) {
+			box.innerHTML = `Good Afternoon ${name}!`;
+			console.log(`Good Afternoon ${name}!`);
+		} else if (hour > 15 && hour < 20) {
+			box.innerHTML = `Good Evening ${name}!`;
+			console.log(`Good Evening ${name}!`);
+		} else {
+			box.innerHTML = `Good Night ${name}!`;
+			console.log(`Good Night ${name}!`);
+		}
+	</script>
+</body>
+</html>
