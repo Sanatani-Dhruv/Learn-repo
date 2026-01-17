@@ -35,25 +35,37 @@ button {
 			</button>
 			<button class="cart-5-2" onclick="
 			box.innerText = `Cart Quantity: ${cartQuantity}`;
+			console.log(`${cartQuantity} items added to cart`);
 			alert(`${cartQuantity} items added to cart`);
 			">
 				Add to Cart
 			</button>
 			<button class="cart-5-3" onclick="
+			if (cartQuantity < maxQuantity) {
 			cartQuantity += 1;
 			box.innerText = `Cart Quantity: ${cartQuantity}`;
+			console.log(`Cart Quantity: ${cartQuantity}`);
+			} else {
+			alert('The Cart is full');
+			}
 			">
 				+1
 			</button>
 			<button class="cart-5-4" onclick="
+			if (cartQuantity > minQuantity) {
 			cartQuantity -= 1;
 			box.innerText = `Cart Quantity: ${cartQuantity}`;
+			console.log(`Cart Quantity: ${cartQuantity}`);
+			} else {
+			alert('Not Enough items in cart');
+			}
 				">
 				-1
 			</button>
 			<button class="cart-5-5" onclick="
 			cartQuantity = 0;
 			box.innerText = `Cart Quantity: ${cartQuantity}`;
+			console.log(`Cart Quantity: ${cartQuantity}`);
 				">
 				Reset Cart
 			</button>
@@ -64,6 +76,8 @@ button {
 		<script>
 			let cartQuantity = 0;
 			const box = document.getElementById('box');
+			const maxQuantity = 10;
+			const minQuantity = 0;
 		</script>
 	</body>
 </html>
