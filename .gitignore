@@ -3,3 +3,5 @@ laravel-course.md
 MAIN
 .not-my-folder
 W3Schools-clone
+:r! ls SS*
+SShot *
