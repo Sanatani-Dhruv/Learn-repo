@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+	<title>VII - A</title>
+</head>
+<body>
+	<script>
+		function greet(name) {
+			if (!name) {
+				console.log(`Hello there!`);
+				return;
+			}
+			console.log(`Hello ${name}!`);
+		}
+
+		greet('World');
+		greet();
+
+		function convertToCelsius(fahrenheit) {
+			let celsius = (fahrenheit - 32) * 5/9;
+			return celsius;
+		}
+
+		function convertToFahrenheit(Celsius) {
+			let fahrenheit = (Celsius * 9 / 5) + 32;
+			return fahrenheit;
+		}
+
+		function convertToTemp(degress, unit) {
+			if (unit == 'F') {
+				let answer = (degress * 9 / 5) + 32;
+				return answer;
+			} else {
+				let answer = (degress - 32) * 5/9;
+				return answer;
+			}
+		}
+
+		console.log(convertToCelsius(86));
+		console.log(convertToFahrenheit(25));
+		console.log(convertToTemp(25, 'F'));
+		console.log(convertToTemp(86, 'C'));
+	</script>
+</body>
+</html>
