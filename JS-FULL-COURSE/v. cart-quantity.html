@@ -41,32 +41,18 @@ button {
 				Add to Cart
 			</button>
 			<button class="cart-5-3" onclick="
-			if (cartQuantity < maxQuantity) {
-			cartQuantity += 1;
-			box.innerText = `Cart Quantity: ${cartQuantity}`;
-			console.log(`Cart Quantity: ${cartQuantity}`);
-			} else {
-			alert('The Cart is full');
-			}
+			incCartquantity(1);
 			">
 				+1
 			</button>
 			<button class="cart-5-4" onclick="
-			if (cartQuantity > minQuantity) {
-			cartQuantity -= 1;
-			box.innerText = `Cart Quantity: ${cartQuantity}`;
-			console.log(`Cart Quantity: ${cartQuantity}`);
-			} else {
-			alert('Not Enough items in cart');
-			}
-				">
+			decCartquantity(1);
+			">
 				-1
 			</button>
 			<button class="cart-5-5" onclick="
-			cartQuantity = 0;
-			box.innerText = `Cart Quantity: ${cartQuantity}`;
-			console.log(`Cart Quantity: ${cartQuantity}`);
-				">
+			resetCart();
+			">
 				Reset Cart
 			</button>
 			<br>
@@ -78,6 +64,34 @@ button {
 			const box = document.getElementById('box');
 			const maxQuantity = 10;
 			const minQuantity = 0;
+
+			function incCartquantity(value) {
+				if (cartQuantity == maxQuantity) {
+					alert(`Cart cannot have more value than ${maxQuantity} and less value than ${minQuantity} `);
+					return;
+				} else {
+					cartQuantity+= value;
+					box.innerText = `Cart Quantity: ${cartQuantity}`;
+					console.log(`Cart Quantity: ${cartQuantity}`);
+				}
+			}
+
+			function decCartquantity(value) {
+				if (cartQuantity == minQuantity) {
+					alert(`Cart cannot have more value than ${maxQuantity} and less value than ${minQuantity} `);
+					return;
+				} else {
+					cartQuantity-= value;
+					box.innerText = `Cart Quantity: ${cartQuantity}`;
+					console.log(`Cart Quantity: ${cartQuantity}`);
+				}
+			}
+
+			function resetCart() {
+				cartQuantity = 0;
+				box.innerText = `Cart Quantity: ${cartQuantity}`;
+				console.log(`Cart Quantity: ${cartQuantity}`);
+			}
 		</script>
 	</body>
 </html>

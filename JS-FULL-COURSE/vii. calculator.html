@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+		<title>Calculator</title>
+		<style>
+* {
+	font-family: monospace;
+	box-sizing: border-box;
+}
+
+main {
+	text-align: center;
+	margin: 1rem auto 1rem;
+	padding: 1rem 1rem 1rem;
+	width: max-content;
+	border: 1.5px solid rgba(87,87,87,1);
+	background-color: lightgrey;
+}
+
+#box {
+	background-color: rgba(167,167,167,1);
+	border: 1.5px solid rgba(87,87,87,1);
+	min-width: 12px;
+	height: 32px;
+	width: 100%;
+	margin: 0 auto 1rem;
+	min-height: 10px;
+	line-height: 1.15;
+	padding: 10px 15px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+	button {
+		border: 1px solid grey;
+		background-color: lightgreen;
+		padding: 10px 12px;
+		color: black;
+		margin-bottom: 0.45rem;
+		transition: all 0.15s;
+	}
+
+	button:hover {
+		opacity: 0.8;
+	}
+
+	button:active {
+		/* opacity: ; */
+		background-color: rgba(50,149,0,1);
+		/* color: white; */
+	}
+		</style>
+	</head>
+	<body>
+		<main>
+			<p id="box"></p>
+			<div>
+				<button class="btn-1" onclick="
+				updateCalcutation(1);
+				">1</button>
+				<button class="btn-2" onclick="
+				updateCalcutation(2);
+				">2</button>
+				<button class="btn-3" onclick="
+				updateCalcutation(3);
+				">3</button>
+				<button class="btn-4" onclick="
+				updateCalcutation('+');
+				">+</button>
+			</div>
+			<div>
+				<button class="btn-1" onclick="
+				updateCalcutation(4);
+				">4</button>
+				<button class="btn-2" onclick="
+				updateCalcutation(5);
+				">5</button>
+				<button class="btn-3" onclick="
+				updateCalcutation(6);
+				">6</button>
+				<button class="btn-6" onclick="
+				updateCalcutation('-');
+				">-</button>
+			</div>
+			<div>
+				<button class="btn-1" onclick="
+				updateCalcutation(7);
+				">7</button>
+				<button class="btn-2" onclick="
+				updateCalcutation(8);
+				">8</button>
+				<button class="btn-3" onclick="
+				updateCalcutation(9);
+				">9</button>
+				<button class="btn-6" onclick="
+				updateCalcutation('*');
+				">*</button>
+			</div>
+			<div>
+				<button class="btn-6" onclick="
+				updateCalcutation(0);
+				">0</button>
+				<button class="btn-6" onclick="
+				updateCalcutation('/');
+				">/</button>
+				<button class="btn-5" onclick="
+				evalCalculation();
+				">=</button>
+				<button class="btn-6" onclick="
+				clearCalculation();
+				">C</button>
+			</div>
+
+
+			<script>
+				let calculation = '';
+				const box = document.getElementById('box');
+				box.innerHTML = calculation;
+
+				function updateCalcutation(value) {
+					calculation+= value;
+					box.innerHTML = calculation;
+					console.log(calculation);
+				}
+
+				function evalCalculation() {
+					calculation = eval(calculation);
+					box.innerHTML = calculation;
+					return calculation;
+				}
+
+				function clearCalculation() {
+					calculation = '';
+					box.innerHTML = '';
+				}
+			</script>
+		</main>
+	</body>
+</html>
