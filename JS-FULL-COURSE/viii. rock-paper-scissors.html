@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+		<title>VI. Rock Paper Scissors</title>
+	</head>
+	<body>
+		<code>
+			<h2 id="title">Rock Paper Scissors</h2>
+		</code>
+		<button class="choice-1" onclick="
+		playGame('rock');
+		">Rock</button>
+		<button class="choice-2" onclick="
+		playGame('paper');
+		">Paper</button>
+		<button class="choice-3" onclick="
+		playGame('scissors');
+		">Scissors</button>
+		<p id="box"></p>
+		<div id="big-box"></div>
+		<script>
+			const box = document.getElementById('box');
+			const bigBox = document.getElementById('big-box');
+
+			let yourScore = 0;
+			let computerScore = 0;
+			let draw = 0;
+
+			function playGame(playerMove) {
+
+				let myMove = playerMove;
+				let computerMove = pickComputerMove();
+				if (myMove == 'paper') {
+					if (computerMove === 'paper') {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+						draw++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					} else if (computerMove === 'scissors') {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+						computerScore++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					} else {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
+						yourScore++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					}
+				} else if (myMove == 'rock') {
+					if (computerMove === 'paper') {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+						computerScore++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					} else if (computerMove === 'scissors') {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
+						yourScore++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					} else {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+						draw++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					}
+				} else {
+					if (computerMove === 'paper') {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>You Win!`;
+						yourScore++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					} else if (computerMove === 'scissors') {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Draw!`;
+						draw++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					} else {
+						box.innerHTML = `Your Move: ${myMove}<br>Computer Move: ${computerMove}<br>Computer Win!`;
+						computerScore++;
+						bigBox.innerHTML = `Your Win: ${yourScore}, Computer Win: ${computerScore}, Draw: ${draw}`;
+					}
+
+				}
+			}
+			function pickComputerMove() {
+
+				let computerMove = '';
+
+				randomNum = Math.random();
+
+				if (randomNum < 1/3) {
+					computerMove = 'rock';
+				} else if(randomNum > 1/3 && randomNum < 2/3) {
+					computerMove = 'paper';
+				} else {
+					computerMove = 'scissors';
+				}
+
+				return computerMove;
+			}
+		</script>
+	</body>
+</html>

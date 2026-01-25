@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+		<title>VIII. Objects</title>
+	</head>
+	<body>
+
+		<script>
+			let product = {
+				name: 'socks',
+				price: 1090
+			} 
+
+			console.log(product.name);
+
+			product.name = 'Aone Socks';
+			product.price = 1090 + 1020;
+
+			console.log("Name: " + product.name);
+			console.log("Price: " + product.price);
+
+			product.desc = "This is Description";
+			console.log(product);
+			delete product.desc;
+			console.log(product);
+		</script>
+	</body>
+</html>
