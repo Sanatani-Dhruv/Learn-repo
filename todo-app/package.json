@@ -1,0 +1,15 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Basic todo app which records task in rdbms",
+  "keywords": [
+    "todo"
+  ],
+  "license": "MIT",
+  "author": "Sanatani-Dhruv",
+  "type": "commonjs",
+  "main": "js/base.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
