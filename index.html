@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+		<title>Learn Repo</title>
+		<link rel="icon" href="./portfolio-logo.png">
+		<style>
+* {
+	font-family: cursive;
+}
+
+body {
+	background-color: lightblue;
+	font-size: 1.1rem;
+}
+
+.link {
+	color: rgba(134,0,255,1);
+	text-decoration: none;
+	transition: all 0.1s;
+	font-size: 1.15rem;
+}
+
+.link::before {
+	content: '> ';
+}
+
+.link:hover {
+	.in-link-text {
+		text-decoration: underline;
+	}
+}
+
+.head {
+	text-align: center;
+	font-size: 0.9rem;
+	h1 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.3rem;
+	}
+}
+
+.quote {
+	border-left: 0.5rem solid rgba(78,78,78,1);
+	background-color: grey;
+	color: white;
+	font-weight: 600;
+	font-family: monospace;
+	padding: 1rem 1rem;
+	max-width: max-content;
+	margin: auto;
+	a {
+		color: inherit;
+	}
+}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<h1>
+				<img src="./portfolio-logo_circle_cropped.png" width="50px" alt="logo">
+				Learn Repo
+			</h1>
+			<h2>This repository contains all the small practice projects I build while learning Web Development</h2>
+
+			<div class="quote"> Every One Starts somewhere - <a href="https://github.com/Sanatani-Dhruv/" target="_blank">Someone</a></div>
+		</div>
+
+		<h3>JS Files / Projects</h3>
+		<div class="links-container">
+			<div class="link-box">
+				<a class="link" href="./JS-FULL-COURSE/vii. calculator.html" target="_blank">
+					<span class="in-link-text">Simple Calculator</span>
+				</a>
+			</div>
+			<div class="link-box">
+				<a class="link" href="./todo-app/index.html" target="_blank">
+					<span class="in-link-text">Simple Todo App</span>
+				</a>
+			</div>
+		</div>
+		<h3>HTML-CSS Files / Projects</h3>
+		<div class="links-container">
+			<div class="link-box">
+				<a class="link" href="./INTRO-TO-HTML-CSS/x. NESTED Layout .html" target="_blank">
+					<span class="in-link-text">Nested Layout</span>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
