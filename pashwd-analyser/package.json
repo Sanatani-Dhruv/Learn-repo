@@ -12,7 +12,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwind build resources/style.css -o ./build/output.css"
+    "build": "tailwind build resources/style.css -o ./build/final.css"
   },
   "devDependencies": {
     "tailwindcss": "^0.7.4"
