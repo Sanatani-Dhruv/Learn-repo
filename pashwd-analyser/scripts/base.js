@@ -11,10 +11,10 @@ function checkStrength() {
   if (inValue.match(/[A-Z]/m)) {output++}; // Check For atleast 1 Uppercase Letter
   if (inValue.match(/[a-z]/m)) {output++}; // Check For atleast 1 Lowercase Letter
   if (inValue.match(/[\d]/m)) {output++}; // Check For atleast 1 Digit
-  if (inValue.match(/[@_]/m)) {output++}; // Check For Special Symbol
-  if (inValue.match(/[-]/m)) {output++}; // Check For Special Symbol
-  if (inValue.match(/[\$]/m)) {output++}; // Check For Special Symbol
-  if (inValue.match(/[\d]+[\w]+\d/m)) {output++}; // Check For Special Symbol
+  if (inValue.match(/[@_]/m)) {output++}; // Check For Special Symbol like @, _
+  if (inValue.match(/[-]/m)) {output++}; // Check For Special Symbol -
+  if (inValue.match(/[\$]/m)) {output++}; // Check For Special Symbol $
+  if (inValue.match(/[\d]+[A-Za-z]+\d/m)) {output++}; // Check for numbers around text
 
   if (inValue.length > 3) {
     switch(output) {
