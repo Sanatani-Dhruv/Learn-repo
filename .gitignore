@@ -5,3 +5,5 @@ MAIN
 W3Schools-clone
 :r! ls SS*
 SShot *
+vendor/
+node_modules/
