@@ -12,7 +12,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @tailwindcss/cli -i ./resources/style.css -o ./build/main.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./resources/tailwind.css -o ./build/main.css --watch",
+    "build": "npx @tailwindcss/cli -i ./resources/tailwind.css -o ./build/main.css -m"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.1",

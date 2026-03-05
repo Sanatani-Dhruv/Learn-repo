@@ -7,4 +7,4 @@ W3Schools-clone
 SShot *
 vendor/
 node_modules/
-build
+# build
