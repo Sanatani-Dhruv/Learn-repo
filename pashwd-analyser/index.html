@@ -3,9 +3,29 @@
 	<head>
 		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
 		<title>Password Analyser</title>
-		<link rel="stylesheet" href="./build/final.css">
+		<link rel="stylesheet" href="./build/main.css">
 	</head>
-	<body>
-		<h1 class="">Hi</h1>
+	<body class="m-auto w-180 h-screen text-center flex justify-center items-center">
+		<main class="p-8 border border-2 border-black/100 rounded">
+			<h1 class="text-4xl pb-10">
+				Password Analyzer
+			</h1>
+			<div id="input-box" class="inputs">
+				<form>
+					<input placeholder="Enter Your Password" class="border border-l-8 w-full p-2" type="text">
+					<input class="text-center border text-lg font-medium pt-1 pl-4 pr-4 pb-1 mt-5 rounded hover:bg-cyan-300 transition-all hover:border-transparent" type="submit">
+				</form>
+			</div>
+			<div class="infoBox text-left pt-4">
+				<h2 class="text-2xl transition-all w-max"># <span class="hover:underline">Information</span></h2>
+				<ul class="list-disc">
+					<li>Password Must Contain Uppercase Letters</li>
+					<li>Password Must Contain Lowercase Letters</li>
+					<li>Password Must Contain Numbers</li>
+					<li>Password Contain Special Symbols Like @, _</li>
+				</ul>
+			</div>
+		</main>
+		<script src="./base.js"></script>
 	</body>
 </html>

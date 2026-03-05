@@ -12,9 +12,10 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwind build resources/style.css -o ./build/final.css"
+    "build": "npx @tailwindcss/cli -i ./resources/style.css -o ./build/main.css --watch"
   },
-  "devDependencies": {
-    "tailwindcss": "^0.7.4"
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
   }
 }
