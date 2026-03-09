@@ -22,7 +22,7 @@ function checkStrength() {
   if (inValue.length > 3) {
     switch(output) {
       case 1:
-        answer = "Very Weak"
+        answer = "Crackable"
         break;
       case 2:
         answer = "Weak";
