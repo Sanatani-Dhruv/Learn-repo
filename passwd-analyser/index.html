@@ -5,9 +5,9 @@
 		<title>Password Analyser</title>
 		<link rel="stylesheet" href="./build/main.css">
 	</head>
-	<body class="m-auto w-200 h-screen text-center flex justify-center items-center bg-gray-300">
-		<main class="p-12 border border-3 border-black/100 rounded bg-white shadow-xl">
-			<h1 class="text-4xl flex font-medium">
+	<body class="text-sm mt-12 md:m-auto w-screen md:w-200 md:h-screen text-center flex justify-center items-center bg-gray-300">
+		<main class="md:p-12 md:m-auto m-4 p-8 md:w-130 border border-3 border-black/100 rounded bg-white shadow-xl">
+			<h1 class="text-4xl flex font-medium justify-center">
 				<img src="./images/password.svg" width="25" alt="">Password Analyzer
 			</h1>
 			<p class="pb-8 pt-2 font-medium">Think you have a strong password? Find out below.</p>
@@ -25,6 +25,13 @@
 					<li>1 - Password Contain Numbers</li>
 					<li>1 - Password Contain text mixed with numbers</li>
 					<li>Upto 3 - Password Contain Special Symbols Like @, _</li>
+					<div class="text-red-700/100 font-bold text-lg pt-1.5 pb-2">Instant Error if:</div>
+					<li>
+						Alpha-numeric sequence detected for more than 3 Character
+					</li>
+					<li>
+						Same Character Repeated for more than 3 Character
+					</li>
 				</ul>
 				<p id="errbox" class="text-red-800 underline text-lg font-bold mt-2"></p>
 			</div>
