@@ -1,13 +1,13 @@
 {
-  "name": "pashwd-analyser",
+  "name": "passwd-analyser",
   "version": "1.0.0",
   "description": "Simple Password Analyser",
   "repository": {
     "type": "git",
-    "url": "../"
+    "url": "https://github.com/Sanatani-Dhruv/Learn-repo"
   },
   "license": "MIT",
-  "author": "",
+  "author": "dhruv125",
   "type": "commonjs",
   "main": "index.html",
   "scripts": {

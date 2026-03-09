@@ -14,7 +14,7 @@ function checkStrength() {
   if (inValue.match(/[@_]/m)) {output++}; // Check For Special Symbol like @, _
   if (inValue.match(/[-]/m)) {output++}; // Check For Special Symbol -
   if (inValue.match(/[\$]/m)) {output++}; // Check For Special Symbol $
-  if (inValue.match(/[\d]+[A-Za-z]+\d/m)) {output++}; // Check for numbers around text
+  if (inValue.match(/[\d]+[A-Za-z\$@_-]+\d/m)) {output++}; // Check for numbers around text
 
   if (inValue.length > 3) {
     switch(output) {
