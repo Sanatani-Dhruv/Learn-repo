@@ -16,7 +16,7 @@ function checkStrength() {
   if (inValue.match(/[-]/m)) {output++}; // Check For Special Symbol -
   if (inValue.match(/[\$]/m)) {output++}; // Check For Special Symbol $
   if (inValue.match(/[\d]+[A-Za-z\$@_-]+\d/m)) {output++}; // Check for numbers around text
-  if (inValue.match(/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz|123|234|345|456)/i)) {output = 0}; //
+  if (inValue.match(/(?:abc|bcd|cde|def|efg|fgh|ghi|hij|ijk|jkl|klm|lmn|mno|nop|opq|pqr|qrs|rst|stu|tuv|uvw|vwx|wxy|xyz|012|123|234|345|456|567|678|789|890)/i)) {output = 0}; //
   if (inValue.match(/(.)\1{2,}/)) {output = -1}; //
 
   if (inValue.length > 3) {
